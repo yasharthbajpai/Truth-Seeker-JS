@@ -1,0 +1,271 @@
+/* Background video styling */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* Slightly reduce opacity to blend with background */
+}
+
+/* Main container styling with white/gray theme */
+.fact-check-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  position: relative;
+  z-index: 1;
+}
+
+.fact-check-header {
+  background: linear-gradient(135deg, #4a4a4a, #7e7e7e);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fact-check-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.fact-check-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.results-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background-color: rgba(250, 250, 250, 0.9);
+}
+
+.user-submission {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.submission-content h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.submission-content p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.submission-time {
+  font-size: 0.8rem;
+  color: #888;
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.fact-check-result {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+}
+
+.verdict {
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.green-verdict {
+  background-color: #4CAF50;
+}
+
+.red-verdict {
+  background-color: #F44336;
+}
+
+.yellow-verdict {
+  background-color: #FFC107;
+  color: #333;
+}
+
+.gray-verdict {
+  background-color: #9E9E9E;
+}
+
+.result-details {
+  padding: 1rem;
+  background-color: white;
+}
+
+.explanation h4, .corrections h4 {
+  margin-top: 0;
+  color: #444;
+}
+
+.corrections {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.result-time {
+  font-size: 0.8rem;
+  color: #888;
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.error-message {
+  background-color: #ffebee;
+  border-left: 4px solid #F44336;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.error-time {
+  font-size: 0.8rem;
+  color: #888;
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.fact-checking-message {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+}
+
+.fact-checking-message p {
+  margin: 0 0 0.5rem;
+  color: #555;
+}
+
+.typing-indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.typing-indicator span {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #777;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+  }
+}
+
+.input-container {
+  display: flex;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e0e0e0;
+}
+
+.input-container textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: white;
+}
+
+.input-container textarea:focus {
+  border-color: #777;
+}
+
+.input-container button {
+  background: linear-gradient(135deg, #4a4a4a, #7e7e7e);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  margin-left: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.input-container button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.input-container button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.input-container button.checking {
+  background: #ccc;
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 2rem;
+  color: #555;
+}
+
+.welcome-message h2 {
+  margin-top: 0;
+  color: #4a4a4a;
+}
